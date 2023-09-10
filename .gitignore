@@ -30,6 +30,24 @@ bin/
 obj/
 TestResults/
 
+# Arquivos e pastas específicas do Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Pastas de saída de compilação do Visual Studio
+bin/
+obj/
+
+# Pacotes NuGet
+*.nuget.props
+*.paket.props
+*.paket.targets
+Packages/
+artifacts/
+
 *_i.c
 *_p.c
 *_i.h
