@@ -4,6 +4,7 @@ using API_SistemaDeAtividades.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API_SistemaDeAtividades.Migrations
 {
     [DbContext(typeof(SistemaAtividadesDBContext))]
-    partial class SistemaAtividadesDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230910153013_VinculoAtividadeUsuario")]
+    partial class VinculoAtividadeUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

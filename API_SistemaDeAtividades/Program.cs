@@ -25,6 +25,7 @@ namespace API_SistemaDeAtividades
 
             //Configuração da Injeção de Dependência
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            builder.Services.AddScoped<IAtividadeRepositorio, AtividadeRepositorio>();
 
             var app = builder.Build();
 
