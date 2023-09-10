@@ -16,28 +16,28 @@ namespace API_SistemaDeAtividades.Controllers
             _atividadeRepositorio = atividadeRepositorio;
         }
 
-        [HttpGet]
+        [HttpGet("ListarAtividade")]
         public async Task<ActionResult<List<AtividadeModel>>> ListarTodas()
         {
             List<AtividadeModel> atividades = await _atividadeRepositorio.BuscarTodasAtividades();
             return Ok(atividades);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("BuscarPorId")]
         public async Task<ActionResult<List<AtividadeModel>>> BuscarPorId(int id)
         {
             AtividadeModel atividade = await _atividadeRepositorio.BuscarPorId(id);
             return Ok(atividade);
         }
 
-        [HttpPost]
+        [HttpPost("InserirAtividade")]
         public async Task<ActionResult<AtividadeModel>> Cadastrar([FromBody] AtividadeModel atividadeModel)
         {
             AtividadeModel atividade = await _atividadeRepositorio.Adicionar(atividadeModel);
             return Ok(atividade);
         }
 
-        [HttpPut]
+        [HttpPut("AtualizarAtividade")]
         public async Task<ActionResult<AtividadeModel>> Atualizar([FromBody] AtividadeModel atividadeModel, int id)
         {
             atividadeModel.Id = id;
@@ -45,7 +45,7 @@ namespace API_SistemaDeAtividades.Controllers
             return Ok(atividade);
         }
 
-        [HttpDelete]
+        [HttpDelete("ApagarAtividade")]
         public async Task<ActionResult<AtividadeModel>> Apagar(int id)
         {
             bool apagado = await _atividadeRepositorio.Apagar(id);

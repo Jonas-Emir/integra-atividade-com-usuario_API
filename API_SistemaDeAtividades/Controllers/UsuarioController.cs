@@ -16,28 +16,28 @@ namespace API_SistemaDeAtividades.Controllers
             _usuarioRepositorio = usuarioRepositorio;
         }
 
-        [HttpGet]
+        [HttpGet("ListarUsuario")]
         public async Task<ActionResult<List<UsuarioModel>>> BuscarTodosUsuarios()
         {
             List<UsuarioModel> usuarios = await _usuarioRepositorio.BuscarTodosUsuarios();
             return Ok(usuarios);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("BuscarPorId")]
         public async Task<ActionResult<List<UsuarioModel>>> BuscarPorId(int id)
         {
             UsuarioModel usuario = await _usuarioRepositorio.BuscarPorId(id);
             return Ok(usuario);
         }
 
-        [HttpPost]
+        [HttpPost("InserirUsuario")]
         public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioModel usuarioModel)
         {
             UsuarioModel usuario = await _usuarioRepositorio.Adicionar(usuarioModel);
             return Ok(usuario);
         }
 
-        [HttpPut]
+        [HttpPut("AtualizarUsuario")]
         public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, int id)
         {
             usuarioModel.Id = id;
@@ -45,7 +45,7 @@ namespace API_SistemaDeAtividades.Controllers
             return Ok(usuario);
         }
 
-        [HttpDelete]
+        [HttpDelete("ApagarUsuario")]
         public async Task<ActionResult<UsuarioModel>> Apagar(int id)
         {
             bool apagado = await _usuarioRepositorio.Apagar(id);
