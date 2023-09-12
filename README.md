@@ -1,6 +1,6 @@
 # Sistema de Atividades API
 
-Esta é uma API RESTful ASP.NET Core que fornece funcionalidades para um sistema de atividades. Os recursos principais incluem o cadastro de atividades e usuários, com a capacidade de vincular atividades a usuários. Você pode usar o Swagger ou o Postman para interagir com esta API.
+Esta é uma API REST ASP.NET Core que fornece funcionalidades para um sistema de atividades. Os recursos principais incluem o cadastro de atividades e usuários, com a capacidade de vincular atividades a usuários. Você pode usar o Swagger ou o Postman para interagir com esta API.
 
 ## Pré-requisitos
 
