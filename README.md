@@ -17,6 +17,18 @@ Antes de executar a API, certifique-se de que você tenha o seguinte instalado:
 - Microsoft.EntityFrameworkCore.Tools
 - Swashbuckle.AspNetCore
 
+## Uso da API
+
+### A API oferece os seguintes endpoints tanto para Usuários quanto para Atividades:
+
+- POST /api/Usuario/InserirUsuario: Crie um novo usuário.
+- GET /api/Usuario/ListarUsuario: Obtenha a lista de todos os usuários.
+- GET /api/Usuario/BuscarPorId: Obtenha os detalhes de um usuário específico.
+- PUT api/Usuario/AtualizarUsuario: Atualiza um usuário.
+- DELETE /api/Usuario/ApagarUsuario: Apaga um usuário.
+
+![gifApi](https://github.com/Jonas-Emir/API_SistemaDeAtividades/assets/89087399/d638a544-8b44-422e-977b-73c831dd666b)
+
 
 ## Configuração do Projeto
 
@@ -39,16 +51,6 @@ Antes de executar a API, certifique-se de que você tenha o seguinte instalado:
    dotnet run
 
 5. Necessário configurar o arquivo appsettings.json para conexão com banco de dados.
-
-## Uso da API
-
-### A API oferece os seguintes endpoints tanto para Usuários quanto para Atividades:
-
-- POST /api/Usuario/InserirUsuario: Crie um novo usuário.
-- GET /api/Usuario/ListarUsuario: Obtenha a lista de todos os usuários.
-- GET /api/Usuario/BuscarPorId: Obtenha os detalhes de um usuário específico.
-- PUT api/Usuario/AtualizarUsuario: Atualiza um usuário.
-- DELETE /api/Usuario/ApagarUsuario: Apaga um usuário.
 
 ## Contribuição
 
